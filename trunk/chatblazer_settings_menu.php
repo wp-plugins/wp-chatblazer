@@ -100,7 +100,10 @@
 	<h3><?php _e('Site Settings'); ?></h3>
 
 	<table class="form-table" border="0">
-		<tr>
+				<tr>
+		        <td colspan="2"><?php _e('To configure this plugin, you must have a free, or paid, account at <a href="http://www.chatblazer.com" target="_blank">www.ChatBlazer.com</a>'  Once you have created your account, enter your Chatblazer configurations below.); ?>	</td>			
+		</tr>
+        <tr>
 			<th scope="row"><?php _e('Source Base'); ?></th>
 			<td><input type="text" size="50" name="WP_Chatblazer[SourceBase]" value="<?php echo $options['SourceBase']; ?>" maxlength="256" /></td>
 		</tr>
