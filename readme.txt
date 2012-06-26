@@ -4,7 +4,7 @@ Donate link: http://wp-chatblazer.com/donate
 Tags: chatblazer, chat, live chat, embed chatroom, video chat, instant messaging, host chatroom 
 Requires at least: 2.8
 Tested up to: 3.4
-Stable tag: 1.0
+Stable tag: 1.1
 
 WP Chatblazer is a plugin to allow you to embed a Chatblazer application on a Wordpress page.  Embed instant messaging and video chat directly on pages and posts with a simple shortcode.  
 
@@ -51,3 +51,5 @@ Because Chatblazer software uses Flash, it will NOT run on an ipad, or any other
 
 = 1.0   = 
 * Initial release
+= 1.1   =
+* Added description, tags, and link to chatblazer in settings page
