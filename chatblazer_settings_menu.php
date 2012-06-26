@@ -108,6 +108,9 @@
 			<th scope="row"><?php _e('Site ID'); ?></th>
 			<td><input type="text" name="WP_Chatblazer[SiteID]" value="<?php echo $options['SiteID']; ?>" maxlength="8" /></td>
 		</tr>
+        <tr>
+        <td scope="row"><?php _e('To configure this plugin, you must have a free, or paid, account at <a href="http://www.chatblazer.com">www.ChatBlazer.com</a>'); ?>	</td>
+        </tr>
 		<tr>
 			<th scope="row"><?php _e('Main Config File Name'); ?></th>
 			<td><input type="text" name="WP_Chatblazer[MainConfig]" value="<?php echo $options['MainConfig']; ?>" maxlength="24" /></td>
