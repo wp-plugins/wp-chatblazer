@@ -101,7 +101,7 @@
 
 	<table class="form-table" border="0">
 				<tr>
-		        <td colspan="2"><?php _e('To configure this plugin, you must have a free, or paid, account at <a href="http://www.chatblazer.com" target="_blank">www.ChatBlazer.com</a>'  Once you have created your account, enter your Chatblazer configurations below.); ?>	</td>			
+		        <td colspan="2"><?php _e('To configure this plugin, you must have a free, or paid, account at <a href="http://www.chatblazer.com" target="_blank">www.ChatBlazer.com</a>  Once you have created your account, enter your Chatblazer configurations below.'); ?>	</td>			
 		</tr>
         <tr>
 			<th scope="row"><?php _e('Source Base'); ?></th>
