@@ -5,8 +5,8 @@
 Plugin Name: WP-Chatblazer
 Plugin URI: http://www.wp-chatblazer.com
 Description: Installs a Chatblazer chat application in a Wordpress site
-Version: 1.4
-Date:  June 25, 2012
+Version: 1.5
+Date:  July 26, 2012
 Author: Phyllis Erck
 Author URI: http://www.phylliserck.net
 License: GPL2
