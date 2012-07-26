@@ -1,16 +1,16 @@
 === WP ChatBlazer ===
 Contributors: phylliserck
 Donate link: http://wp-chatblazer.com/donate
-Tags: chatblazer, chat, live chat, embed chatroom, video chat, instant messaging, host chatroom 
+Tags: wordpress chat, chat wordpress, chatroom, chatblazer, chat, live chat, embed chatroom, video chat, instant messaging, host chatroom, multisite, live chat, two-way chat
 Requires at least: 2.8
-Tested up to: 3.4
-Stable tag: 1.4
+Tested up to: 3.4.1
+Stable tag: 1.5
 
-WP Chatblazer is a plugin to allow you to embed a Chatblazer application on a Wordpress page.  Embed instant messaging and video chat directly on pages and posts with a simple shortcode.  
+WP Chatblazer is a plugin to allow you to embed a Chatblazer application on a Wordpress page.  Embed instant messaging and video chat directly on pages and posts with a simple shortcode.  Works on multisite.
 
 == Description ==
 
-WP Chatblazer is a plugin to allow you to embed a Chatblazer application on a Wordpress page. Requires free or paid Chatblazer account.  Host your own chatroom on your blog for a fun interactive experience with your audience.  Easy to use interface allows users to Video chat, send instant messages, and share all types of media, including pictures, youtube videos, and whiteboard drawings.  WP-Chatblazer embeds chatroom directly into pages or posts via shortcode.  
+Embed chatroom on Wordpress pages and posts with shortcode. Host your own chatroom on your blog for a fun interactive experience with your audience.  Easy to use interface allows users to Video chat, send instant messages, and share all types of media, including pictures, youtube videos, and whiteboard drawings.  Requires Chatblazer account, free or paid.    
 
 WP-ChatBlazer is available in:
 
