@@ -174,7 +174,7 @@ function WP_Chatblazer($atts, $content = null) {
     $out[]  = '     if (navigator.appVersion.indexOf("MSIE") !== -1) {';
     $out[]  = '         addParam("isIE","1");';
     $out[]  = '     }';
-    $out[]  = '     if( FlashDetect.installed && FlashDetect.versionAtLeast( 11, 9 ) ) {';
+    $out[]  = '     if( FlashDetect.installed && FlashDetect.versionAtLeast( 8 ) ) {';
     $out[]  = '         embedFlash(flashPath, "' . $width . '", "' . $height . '", "cb8", "' . $source_base . '", "#000000");';
     $out[]  = '     } else {';
     $out[]  = '         var errmsg;
