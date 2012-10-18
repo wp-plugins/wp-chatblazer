@@ -53,3 +53,5 @@ Because Chatblazer software uses Flash, it will NOT run on an ipad, or any other
 * Initial release
 = 1.1   =
 * Added description, tags, and link to chatblazer in settings page
+= 1.6   =
+* Added a flash detection script to display an error message if the user does not have the minimum flash version that is required
