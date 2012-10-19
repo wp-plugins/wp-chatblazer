@@ -6,7 +6,7 @@ Requires at least: 2.8
 Tested up to: 3.4.1
 Stable tag: 1.6
 
-WP Chatblazer is a plugin to allow you to embed a Chatblazer application on a Wordpress page.  Embed instant messaging and video chat directly on pages and posts with a simple shortcode.  Works on multisite.
+WP Chatblazer is a plugin to allow you to embed a Chatblazer application on a Wordpress page.  Embed instant messaging and video chat directly on pages and posts with a simple shortcode.  Works on multisite.    
 
 == Description ==
 
