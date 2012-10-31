@@ -29,7 +29,9 @@ The plugin is simple to install:
 Before adding a chat to your page/post, enter the chat host, chat height and other chat settings under [Settings -> WP-Chatblazer](http://options-general.php?page=wp-chatblazer&AID=121604&BID=13699 "Chat Options")
 
 = Add WP Chatblazer =
-Use [WP-ChatBlazer] to add a chat to your Post or Page content, or use the "WP Chatblazer" widget to add chat to a sidebar, or use <?php echo WP_Chatblazer(); ?> to add a chat to your theme
+* Use '[WP-ChatBlazer]' to add a chat to your Post or Page content
+* Use the "WP Chatblazer" widget to add chat to a sidebar
+* Use '<?php echo WP_Chatblazer(); ?>' to add a chat to your theme
 
 = Using Custom Page Template =
 Copy the file WP_Chatblazer_template.php to your theme folder for a full page chat template
