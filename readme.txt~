@@ -62,4 +62,7 @@ Because Chatblazer software uses Flash, it will NOT run on an ipad, or any other
 = 1.1   =
 * Added description, tags, and link to chatblazer in settings page
 = 1.6   =
-* Added a flash detection script to display an error message if the user does not have the minimum flash version that is required
+* Added a flash detection script to display an error message if the user does not have the minimum flash version that is required.
+* Added a full page chat template for use in themes
+* Added the WP Chatblazer Widget for easily adding chat to sidebars and footer
+* Added the <?php echo WP_Chatblazer(); ?> function so that chat can easily be added to other themes
