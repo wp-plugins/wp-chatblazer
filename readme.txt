@@ -10,7 +10,7 @@ WP Chatblazer is a plugin to allow you to embed a Chatblazer application on a Wo
 
 == Description ==
 
-Embed chatroom on Wordpress pages and posts with shortcode. Host your own chatroom on your blog for a fun interactive experience with your audience.  Easy to use interface allows users to Video chat, send instant messages, and share all types of media, including pictures, youtube videos, and whiteboard drawings.  Requires Chatblazer account, free or paid.    
+Embed a chatroom on Wordpress pages and posts with an easy to use shortcode. Host your own chatroom on your blog for a fun interactive experience with your audience.  Easy to use interface allows users to Video chat, send instant messages, and share all types of media, including pictures, youtube videos, and whiteboard drawings.  Requires Chatblazer account, free or paid.    
 
 WP-ChatBlazer is available in:
 
@@ -20,11 +20,19 @@ WP-ChatBlazer is available in:
 
 The plugin is simple to install:
 
-1. Download `wp-chatblazer.zip`
+= Download `wp-chatblazer.zip` =
 1. Unzip
-1. Upload `wp-chatblazer` directory to your `/wp-content/plugins` directory
-1. Go to the plugin management page and enable the plugin
-1. Configure the plugin from `Settings -> WP-ChatBlazer`
+2. Upload `wp-chatblazer` directory to your `/wp-content/plugins` directory
+3. Go to the plugin management page and enable the plugin
+
+= Configure WP Chatblazer =
+Before adding a chat to your page/post, enter the chat host, chat height and other chat settings under [Settings -> WP-Chatblazer](options-general.php/?page=wp-chatblazer&AID=121604&BID=13699
+
+= Add WP Chatblazer =
+Use [WP-ChatBlazer] to add a chat to your Post or Page content, or use the "WP Chatblazer" widget to add chat to a sidebar, or use <?php echo WP_Chatblazer(); ?> to add a chat to your theme
+
+= Using Custom Page Template =
+Copy the file WP_Chatblazer_template.php to your theme folder for a full page chat template
 
 You can find full details of installing a plugin on the [plugin installation page](http://urbangiraffe.com/articles/how-to-install-a-wordpress-plugin/).
 
@@ -53,3 +61,8 @@ Because Chatblazer software uses Flash, it will NOT run on an ipad, or any other
 * Initial release
 = 1.1   =
 * Added description, tags, and link to chatblazer in settings page
+= 1.6   =
+* Added a flash detection script to display an error message if the user does not have the minimum flash version that is required.
+* Added a full page chat template for use in themes
+* Added the WP Chatblazer Widget for easily adding chat to sidebars and footer
+* Added the <?php echo WP_Chatblazer(); ?> function so that chat can easily be added to other themes

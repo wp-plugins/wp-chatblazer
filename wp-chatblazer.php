@@ -35,6 +35,7 @@ License: GPL2
  * 1.0:       Initial release
  * 1.1:       Added description, tags, and link in settings page to chatblazer  
  * 1.2:       Fixed link
+ * 1.6:       Added a flash detection script to display an error message if the user does not have the correct version of flash
 */
 
 /*****************
@@ -174,7 +175,7 @@ function WP_Chatblazer($atts, $content = null) {
     $out[]  = '     if (navigator.appVersion.indexOf("MSIE") !== -1) {';
     $out[]  = '         addParam("isIE","1");';
     $out[]  = '     }';
-    $out[]  = '     if( FlashDetect.installed && FlashDetect.versionAtLeast( 11, 9 ) ) {';
+    $out[]  = '     if( FlashDetect.installed && FlashDetect.versionAtLeast( 8 ) ) {';
     $out[]  = '         embedFlash(flashPath, "' . $width . '", "' . $height . '", "cb8", "' . $source_base . '", "#000000");';
     $out[]  = '     } else {';
     $out[]  = '         var errmsg;
@@ -309,3 +310,100 @@ function WP_Chatblazer_options_validate($input) {
     return $input;
 
 }
+
+/*************************************************************************************************************************************************************
+ * WP Chatblazer Widget
+ * **********************************************************************************************************************************************************/
+class wpChatblazerWidget extends WP_Widget {
+    /**
+     * Register widget with WordPress
+     */
+    function __construct() {
+        parent::__construct(
+            'WP_Chatblazer_Widget', // Base ID
+            __( 'WP Chatblazer Widget' ), // Name
+            array( 'description' => __( 'Display the WP Chatblazer plugin' ) ) // Args
+        );
+    }
+
+    /**
+     * Front-end display of widget
+     * 
+     * @param array $args
+     * @param array $instance saved values from database
+     */
+     public function widget( $args, $instance ) {
+        extract( $args );
+        $title = apply_filters( 'widget_title', $instance['title'] );
+
+        echo $before_widget;
+        if ( ! empty( $title ) )
+            echo $before_title . $title . $after_title;
+        
+        echo WP_Chatblazer( $instance );
+
+        echo $after_widget;
+    }
+
+    /**
+     * Sanitize widget form values as they are saved.
+     *
+     * @param array $new_instance values just sent to be saved.
+     * @param array $old_instance previously saved values from database.
+     *
+     * @return array updated safe values to be saved.
+     */
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = strip_tags( $new_instance['title'] );
+        $instance['width'] = strip_tags( $new_instance['width'] );
+        $instance['height'] = strip_tags( $new_instance['height'] );
+
+        return $instance;
+    }
+
+    /**
+     * Back-end widget form.
+     *
+     * @param array $instance previously saved values from database.
+     */
+    public function form( $instance ) {
+        if ( isset( $instance[ 'title' ] ) ) {
+            $title = $instance[ 'title' ];
+        }
+        else {
+            $title = __( 'WP Chatblazer', 'text_domain' );
+        }
+        
+        if ( isset( $instance[ 'width' ] ) ) {
+            $width = $instance[ 'width' ];
+        }
+        else {
+            $width = __( '100%', 'text_domain' );
+        }
+        
+        if ( isset( $instance[ 'height' ] ) ) {
+            $height = $instance[ 'height' ];
+        }
+        else {
+            $height = __( '400', 'text_domain' );
+        }
+        ?>
+        <p>
+        
+        <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+        <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+        
+        <label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php _e( 'Width:' ); ?></label> 
+        <input class="widefat" id="<?php echo $this->get_field_id( 'width' ); ?>" name="<?php echo $this->get_field_name( 'width' ); ?>" type="text" value="<?php echo esc_attr( $width ); ?>" />
+        
+        <label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php _e( 'Height:' ); ?></label> 
+        <input class="widefat" id="<?php echo $this->get_field_id( 'height' ); ?>" name="<?php echo $this->get_field_name( 'height' ); ?>" type="text" value="<?php echo esc_attr( $height ); ?>" />
+        
+        </p>
+        <?php 
+    }
+} // class wpChatblazerWidget
+
+//register WP Chatblazer as a widget
+add_action( 'widgets_init', create_function( '', 'register_widget( "wpChatblazerWidget" );' ) );
