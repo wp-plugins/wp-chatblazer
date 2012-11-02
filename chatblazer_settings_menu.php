@@ -64,6 +64,19 @@
 
 <div id="wp-chatblazer-instructions" style="display:none; padding-left:20px; border:1px solid #CCC;">
 	<p><?php _e('This plugin can be used on a <strong>Page</strong> or in a <strong>Post</strong>.'); ?></p>
+	<h2><?php _e( 'Configure WP Chatblazer' ); ?></h2>
+	<p>
+	    <?php _e( 'Before adding a chat to your page/post, enter the chat host, chat height and other chat settings under 
+	              <a href="http://options-general.php/?page=wp-chatblazer&AID=121604&BID=13699">Settings -> WP-Chatblazer</a>' ); ?>
+	</p>
+	<h2><?php _e( 'Add WP Chatblazer' ); ?></h2>
+	<ul>
+	    <li><?php _e( 'Use [WP-ChatBlazer] to add a chat to your Post or Page content' ); ?></li>
+	    <li><?php _e( 'Use the "WP Chatblazer" widget to add chat to a sidebar' ); ?></li>
+	    <li><?php _e( 'Use <code><?php echo WP_Chatblazer(); ?></code> to add chat to your theme' ); ?></li>
+	</ul>
+	<h2><?php _e( 'Using Custom Page Template' ); ?></h2>
+	<p><?php _e( 'Copy the file WP_Chatblazer_template.php to your theme folder for a full page chat template' ); ?></p>
 	<p>
 		<?php _e('<code>[WP-ChatBlazer]</code> - This shorttag embeds the Flash ChatBlazer using the settings below. In a <code>[WP-ChatBlazer]</code> shorttag, you can override the settings using the following attributes:'); ?>
 	</p>
